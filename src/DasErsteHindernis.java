@@ -1,5 +1,5 @@
 import de.ur.mi.bouncer.apps.BouncerApp;
-import de.ur.mi.oop.launcher.GraphicsAppLauncher;
+import de.ur.mi.bouncer.apps.BouncerLauncher;
 
 public class DasErsteHindernis extends BouncerApp {
 
@@ -90,6 +90,6 @@ public class DasErsteHindernis extends BouncerApp {
 	}
 
 	public static void main(String[] args) {
-		GraphicsAppLauncher.launch("DasErsteHindernis");
+		BouncerLauncher.launch("DasErsteHindernis");
 	}
 }

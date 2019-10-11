@@ -1,6 +1,6 @@
 import de.ur.mi.bouncer.apps.BouncerApp;
 import de.ur.mi.bouncer.world.fields.FieldColor;
-import de.ur.mi.oop.launcher.GraphicsAppLauncher;
+import de.ur.mi.bouncer.apps.BouncerLauncher;
 
 public class BouncerAlsMaler extends BouncerApp {
 
@@ -78,6 +78,6 @@ public class BouncerAlsMaler extends BouncerApp {
     }
 
 	public static void main(String[] args) {
-		GraphicsAppLauncher.launch("BouncerAlsMaler");
+        BouncerLauncher.launch("BouncerAlsMaler");
 	}
 }

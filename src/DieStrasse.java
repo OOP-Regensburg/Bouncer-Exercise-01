@@ -1,6 +1,6 @@
 import de.ur.mi.bouncer.apps.BouncerApp;
 import de.ur.mi.bouncer.world.fields.FieldColor;
-import de.ur.mi.oop.launcher.GraphicsAppLauncher;
+import de.ur.mi.bouncer.apps.BouncerLauncher;
 
 public class DieStrasse extends BouncerApp {
 
@@ -46,8 +46,8 @@ public class DieStrasse extends BouncerApp {
 	private void repairField() {
 		bouncer.paintField(FieldColor.GREEN);
 	}
-	
+
 	public static void main(String[] args) {
-		GraphicsAppLauncher.launch("DieStrasse");
+		BouncerLauncher.launch("DieStrasse");
 	}
 }
