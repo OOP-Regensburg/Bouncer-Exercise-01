@@ -25,7 +25,7 @@ public class DieStrasse extends BouncerApp {
 			checkField();
 			bouncer.move();
 		}
-		 // Zusätzlicher Aufruf von checkField() zur Überprüfung des letzten Feldes, wenn Bouncer vor der Wand stehen bleibt.			
+		 // Zusätzlicher Aufruf von checkField() zur Überprüfung des letzten Feldes, wenn Bouncer vor der Wand stehen bleibt.
 		checkField();
 	}
 
