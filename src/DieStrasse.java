@@ -31,7 +31,7 @@ public class DieStrasse extends BouncerApp {
 
 	/**
 	 * Bouncer überprüft die Farbe des Feldes, auf dem er sich gerade befindet und repariert es bei Bedarf.
-	 * Vorbedingung: Der Türsteher steht auf einem Feld.
+	 * Vorbedingung: Bouncer steht auf einem Feld.
 	 * Nachbedingung: Bouncer steht auf einem grünen Feld.
 	 */
 	private void checkField() {
@@ -42,8 +42,8 @@ public class DieStrasse extends BouncerApp {
 
 	/**
 	 * Bouncer repariert das Feld, auf dem er gerade steht.
-	 * Vorbedingung: Der Türsteher steht auf einem roten Feld.
-	 * Nachbedingung: Der Türsteher steht auf einem grünen Feld.
+	 * Vorbedingung: Bouncer steht auf einem roten Feld.
+	 * Nachbedingung: Bouncer steht auf einem grünen Feld.
 	 */
 	private void repairField() {
 		bouncer.paintField(FieldColor.GREEN);
