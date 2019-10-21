@@ -4,9 +4,9 @@ import de.ur.mi.bouncer.apps.BouncerLauncher;
 public class DasErsteHindernis extends BouncerApp {
 
 	/**
-	 * Bouncer moves from left to right and climbs over an obstacles
-	 * Pre-condition: Bouncer stands on the left side of the obstacles, facing east
-	 * Post-condition: Bouncer stands on the right side of the obstacles, facing east
+	 * Bouncer bewegt sich von links nach rechts und klettert über ein Hindernis.
+	 * Vorbedingung: Bouncer steht auf der linken Seite der Hindernisse, nach Osten ausgerichtet.
+	 * Nachbedingung: Bouncer steht auf der rechten Seite der Hindernisse, nach Osten ausgerichtet.
 	 */
 	@Override
 	public void bounce() {
@@ -17,9 +17,9 @@ public class DasErsteHindernis extends BouncerApp {
 	}
 
 	/**
-	 * Bouncer moves to the obstacle
-	 * Pre-condition: Bouncer stands on the left side of the obstacles, facing east
-	 * Post-condition: Bouncer stands in front of the obstacle, facing east
+	 * Bouncer bewegt sich zum Hindernis.
+	 * Vorbedingung: Bouncer steht auf der linken Seite der Hindernisse, nach Osten ausgerichtet.
+	 * Nachbedingung: Bouncer steht vor dem Hindernis, nach Osten ausgerichtet.
 	 */
 	private void moveToObstacle() {
 		bouncer.move();
@@ -27,9 +27,9 @@ public class DasErsteHindernis extends BouncerApp {
 	}
 
 	/**
-	 * Bouncer moves to the east end of the wall
-	 * Pre-condition: Bouncer stands behind the obstacle, facing east
-	 * Post-condition: Bouncer stands at the east end of the map, facing east
+	 * Bouncer bewegt sich zum östlichen Ende der Wand.
+	 * Vorbedingung: Bouncer steht hinter dem Hindernis, nach Osten ausgerichtet.
+	 * Nachbedingung: Bouncer steht am östlichen Ende der Karte, nach Osten ausgerichtet.
 	 */
 	private void moveToWall() {
 		bouncer.move();
@@ -40,9 +40,9 @@ public class DasErsteHindernis extends BouncerApp {
 	}
 
 	/**
-	 * Bouncer climbs over the obstacle
-	 * Pre-condition: Bouncer stands in front of the obstacle, facing east
-	 * Post-condition: Bouncer stands behind the obstacle, facing east
+	 * Bouncer klettert über das Hindernis.
+	 * Vorbedingung: Bouncer steht vor dem Hindernis, nach Osten ausgerichtet.
+	 * Nachbedingung: Bouncer steht hinter dem Hindernis, nach Osten ausgerichtet.
 	 */
 	private void climbOverObstacle() {
 		climbUp();
@@ -50,9 +50,9 @@ public class DasErsteHindernis extends BouncerApp {
 	}
 
 	/**
-	 * Bouncer climbs up the obstacle
-	 * Pre-condition: Bouncer stands in front of the obstacle, facing east
-	 * Post-condition: Bouncer stands on top of the obstacle, facing east
+	 * Bouncer klettert das Hindernis hinauf.
+	 * Vorbedingung: Bouncer steht vor dem Hindernis, nach Osten ausgerichtet.
+	 * Nachbedingung: Bouncer steht auf dem Hindernis, nach Osten ausgerichtet.
 	 */
 	private void climbUp() {
 		bouncer.turnLeft();
@@ -70,9 +70,9 @@ public class DasErsteHindernis extends BouncerApp {
 	}
 
 	/**
-	 * Bouncer climbs down the obstacle
-	 * Pre-condition: Bouncer stands on top of the obstacle, facing east
-	 * Post-condition: Bouncer stands behind the obstacle, facing east
+	 * Bouncer klettert das Hindernis hinunter.
+	 * Vorbedingung: Bouncer steht auf dem Hindernis, nach Osten ausgerichtet.
+	 * Nachbedingung: Bouncer steht hinter dem Hindernis, nach Osten ausgerichtet.
 	 */
 	private void climbDown() {
 		bouncer.move();

@@ -5,9 +5,9 @@ import de.ur.mi.bouncer.apps.BouncerLauncher;
 public class BouncerAlsMaler extends BouncerApp {
 
     /**
-     * Bouncer moves into a room and paints the walls red.
-     * Pre-condition: Bouncer stands on the ground, facing east
-     * Post-condition: Bouncer stands on the right side of the map, facing east
+     * Bouncer bewegt sich in einen Raum und streicht die Wände rot.
+     * Vorbedingung: Bouncer steht auf dem Boden, nach Osten ausgerichtet.
+     * Nachbedingung: Bouncer steht auf der rechten Seite der Karte, nach Osten ausgerichtet.
      */
     @Override
     public void bounce() {
@@ -17,9 +17,9 @@ public class BouncerAlsMaler extends BouncerApp {
     }
 
     /**
-     * Bouncer moves from his starting position to the doorway
-     * Pre-condition: Bouncer stands on the ground, facing east
-     * Post-condition: Bouncer stands on the ground (in the doorway), facing east
+     * Bouncer bewegt sich von seiner Ausgangsposition zur Türöffnung.
+     * Vorbedingung: Bouncer steht auf dem Boden, nach Osten ausgerichtet.
+     * Nachbedingung: Bouncer steht auf dem Boden (in der Türöffnung), nach Osten ausgerichtet.
      */
     private void enterRoom() {
         while(bouncer.canMoveLeft()) {
@@ -28,9 +28,9 @@ public class BouncerAlsMaler extends BouncerApp {
     }
 
     /**
-     * Bouncer paints the walls red.
-     * Pre-condition: Bouncer stands on the ground (in the doorway), facing east
-     * Post-condition: Bouncer stands on the right side of the map, facing east
+     * Bouncer streicht die Wände rot an.
+     * Vorbedingung: Bouncer steht auf dem Boden (in der Türöffnung), nach Osten ausgerichtet.
+     * Nachbedingung: Bouncer steht auf der rechten Seite der Karte, nach Osten ausgerichtet.
      */
     private void paintRoom() {
         while(bouncer.canMoveForward()) {
@@ -40,9 +40,9 @@ public class BouncerAlsMaler extends BouncerApp {
     }
 
     /**
-     * Bouncer paints all fields in the current lane (from ground to ceiling).
-     * Pre-condition: Bouncer stands on the ground (in the room), facing east
-     * Post-condition: Bouncer stands on the ground (in the room), facing east
+     * Bouncer malt alle Felder in der aktuellen Spur (vom Boden bis zur Decke).
+     * Vorbedingung: Bouncer steht auf dem Boden (im Raum), nach Osten gerichtet.
+     * Nachbedingung: Bouncer steht auf dem Boden (im Raum), nach Osten gerichtet.
      */
     private void paintLane() {
         bouncer.turnLeft();
@@ -59,18 +59,18 @@ public class BouncerAlsMaler extends BouncerApp {
     }
 
     /**
-     * Bouncer moves to the next lane.
-     * Pre-condition: Bouncer stands on the ground (in the room), facing east
-     * Post-condition: Bouncer stands on the next field, facing east
+     * Bouncer bewegt sich auf die nächste Spur.
+     * Vorbedingung: Bouncer steht auf dem Boden (im Raum), nach Osten gerichtet.
+     * Nachbedingung: Bouncer steht auf dem nächsten Feld, nach Osten ausgerichtet.
      */
     private void moveToNextLane() {
         bouncer.move();
     }
 
     /**
-     * Bouncer turns around
-     * Pre-condition: Bouncer stands on any field, facing in any direction
-     * Post-condition: Bouncer stands on the same field, facing in the opposite direction
+     * Bouncer dreht sich um
+     * Vorbedingung: Bouncer steht auf einem beliebigen Feld und zeigt in eine beliebige Richtung.
+     * Nachbedingung: Bouncer steht auf dem gleichen Feld und zeigt in die entgegengesetzte Richtung.
      */
     private void turnAround() {
         bouncer.turnLeft();

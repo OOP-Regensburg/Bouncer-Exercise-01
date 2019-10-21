@@ -5,9 +5,9 @@ import de.ur.mi.bouncer.apps.BouncerLauncher;
 public class DieStrasse extends BouncerApp {
 
 	/**
-	 * Bouncer moves from the left to the right side of the map and repairs broken fields on the street
-	 * Pre-condition: Bouncer stands on the left side of the map, facing east
-	 * Post-condition: Bouncer stands on the right side of the map, facing east
+	 * Bouncer bewegt sich von links nach rechts auf der Karte und repariert beschädigte Felder auf der Straße.
+	 * Vorbedingung: Bouncer steht auf der linken Seite der Karte, nach Osten ausgerichtet.
+	 * Nachbedingung: Bouncer steht auf der rechten Seite der Karte, nach Osten ausgerichtet.
 	 */
 	@Override
 	public void bounce() {
@@ -16,25 +16,23 @@ public class DieStrasse extends BouncerApp {
 	}
 
 	/**
-	 * Bouncer moves from the left to the right side of the map and repairs broken fields on the street
-	 * Pre-condition: Bouncer stands on the left side of the map, facing east
-	 * Post-condition: Bouncer stands on the right side of the map, facing east
+	 * Bouncer bewegt sich von links nach rechts auf der Karte und repariert beschädigte Felder auf der Straße.
+	 * Vorbedingung: Bouncer steht auf der linken Seite der Karte, nach Osten ausgerichtet.
+	 * Nachbedingung: Bouncer steht auf der rechten Seite der Karte, nach Osten ausgerichtet.
 	 */
 	private void checkStreet() {
 		while(bouncer.canMoveForward()) {
 			checkField();
 			bouncer.move();
 		}
-		/**
-		 * Additional call to checkField() to check last field when Bouncer stops in front of the wall
-		 */
+		 // Zusätzlicher Aufruf von checkField() zur Überprüfung des letzten Feldes, wenn Bouncer vor der Wand stehen bleibt.			
 		checkField();
 	}
 
 	/**
-	 * Bouncer checks the color of the field he is currently standing on and repairs it if necessary
-	 * Pre-condition: Bouncer stands on a field
-	 * Post-condition: Bouncer stands on on a green field
+	 * Bouncer überprüft die Farbe des Feldes, auf dem er sich gerade befindet und repariert es bei Bedarf.
+	 * Vorbedingung: Der Türsteher steht auf einem Feld.
+	 * Nachbedingung: Bouncer steht auf einem grünen Feld.
 	 */
 	private void checkField() {
 		if(bouncer.isOnFieldWithColor(FieldColor.RED)) {
@@ -43,9 +41,9 @@ public class DieStrasse extends BouncerApp {
 	}
 
 	/**
-	 * Bouncer repairs the field he is currently standing on
-	 * Pre-condition: Bouncer stands on a red field
-	 * Post-condition: Bouncer stands on a green field
+	 * Bouncer repariert das Feld, auf dem er gerade steht.
+	 * Vorbedingung: Der Türsteher steht auf einem roten Feld.
+	 * Nachbedingung: Der Türsteher steht auf einem grünen Feld.
 	 */
 	private void repairField() {
 		bouncer.paintField(FieldColor.GREEN);
